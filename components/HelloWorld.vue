@@ -1,23 +1,22 @@
 <template lang='pug'>
 .hello-world
   h1 {{ msg }}
-  button(@click='count++') count is: {{ count }}
+  button(@click='inc') count is: {{ state.count }}
   p
     | Edit 
     code components/HelloWorld.vue
     |  to test hot module replacement.
 </template>
 
-<script>
+<script lang='ts'>
+import { reactive } from 'vue'
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
-  },
-  data() {
-    return {
-      count: 0
-    }
+  props: { msg: String },
+  setup () {
+    const state = reactive({ count: 0 })
+    function inc () { window.$store.set('count', ++state.count) }
+    return { state, inc }
   }
 }
 </script>
