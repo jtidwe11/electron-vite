@@ -1,6 +1,6 @@
 {
   "name": "electron-vite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "main.js",
   "scripts": {
     "dev": "electron .",
@@ -8,10 +8,10 @@
   },
   "repository": "https://github.com/jtidwe11/electron-vite",
   "dependencies": {
-    "vue": "^3.0.0-beta.13"
+    "vue": "^3.0.0-beta.14"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.0-beta.13",
+    "@vue/compiler-sfc": "^3.0.0-beta.14",
     "electron": "^8.3.0",
     "eslint": "^7.0.0",
     "eslint-config-standard": "^14.1.1",
@@ -21,7 +21,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "pug": "^2.0.4",
     "tailwindcss": "^1.4.6",
-    "vite": "^0.15.3"
+    "vite": "^0.16.0"
   },
   "eslintConfig": {
     "extends": "standard"
