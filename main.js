@@ -2,6 +2,8 @@ const { app, BrowserWindow, ipcMain } = require('electron')
 const { createServer } = require('vite')
 const path = require('path')
 const Store = require('./app/store.js')
+
+process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true'
 const PORT = 3000
 
 const store = new Store({
