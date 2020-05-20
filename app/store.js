@@ -29,8 +29,10 @@ class Store {
     }
     obj[keys.shift()] = val
 
-    const jsonData = (({ state, ...o }) => o)(this.data)
-    fs.writeFileSync(this.path, JSON.stringify(jsonData))
+    if (!keyPath.startsWith('state')) {
+      const jsonData = (({ state, ...o }) => o)(this.data)
+      fs.writeFileSync(this.path, JSON.stringify(jsonData))
+    }
 
     return this.data.state
   }
