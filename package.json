@@ -21,7 +21,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "pug": "^2.0.4",
     "tailwindcss": "^1.4.6",
-    "vite": "^0.16.0"
+    "vite": "^2.9.13"
   },
   "eslintConfig": {
     "extends": "standard"
